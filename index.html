@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Anatomia</title>
+    <title>Anatomia Web - HTML 5</title>
+    <!-- Style CSS -->
+     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>
+            Anatomia de uma página HTMl5
+            <nav>
+                <a href="#estrutura">Estrutura</a>
+                <a href="#midia">Mídia</a>
+                <a href="#dados">Dados</a>
+                <a href="#texto">Texto</a>
+                <a href="#interatividade">Interatividade</a>
+            </nav>
+        </h1>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2>Uma página que explica a si mesma</h2>
+            <p>Bem-vindos! Esta página foi construída com um exemplo prático do uso de tags semânticas do HTML5. Cada seção que você vê abaixo não apenas utiliza as tags, mas também explica o por quê do seu uso. Inspecione o código para ver a mágica acontecer!</p>
+        </div>
+
+        <section id="estrutura">
+            <h1>Estrutura Semântica</h1>
+            <div class="card tag-highlight">
+                <p>Pense nas tags de estrutura como as caixas transparentes de um mímico. Elas existem, definem espaços e organizam a cena, mas são invisíveis para o público. Elas não mudam o visual sozinhas, mas informam ao navegador o papel de cada bloco, melhorando a acessibilidade e o SEO.</p>
+                <p>Tags como code <code>&lt;header&gt;</code>,  <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code> formam o esqueleto da página.
+                </p>
+                <div class="diagram-layout">
+                    <header class="diagram-header">
+                        <code>&lt;header&gt;</code> (Cabeçalho)
+                    </header>
+                    <div class="diagram-content">
+                        <article>
+                            <h4><code>&lt;article&gt;</code></h4>
+                            <p>Este é o conteúdo principal e autônomo. Poderia ser lido separadamente e ainda faria sentido. Por exemplo, a matéria de um jornal.
+                            </p>
+                        </article>
+
+                        <aside>
+                            <h4><code>&lt;aside&gt;</code></h4>
+                            <p>Isto é um conteúdo lateral. Relacionado ao  <code>&lt;article&gt;</code>, mas não faz parte do fluxo principal. Pense em uma caixa de "leia também".</p>
+                        </aside>
+                    </div>
+                    <footer class="diagram-footer">
+                        <code>&lt;footer&gt;</code> (Rodapé)
+                    </footer>
+                </div>
+            </div>
+        </section>
+
+        <section id="midia">
+            <h3>Agrupando Mídias e Legendas</h3>
+            <div class="card grid-container">
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="https://placehold.co/600x400/3b82f6/ffffff?text=Imagem+para+Desktop
+                        ">
+                        <img src="https://placehold.co/400x500/000000/ffffff?text=Imagem+para+Mobile" alt="Exemplo de imagem responsiva">
+                    </picture>
+                    <figcaption>
+                        Esta imagem usa <code>&lt;picture&gt;</code>. Redimensione a janela para ver a imagem mudar.
+                    </figcaption>
+                </figure>
+                <div class="tag-highlight">
+                    <p>A tag <code>&lt;figure&gt;</code> é usada para encapsular a imagem
+                        e sua legenda. Dentro dela, a tag <code>&lt;picture&gt;</code>,
+                        com suas tags <code>&lt;source&gt;</code>, otimiza a experiência
+                        visual, carregando a imagem ideal para cada dispositivo. A legenda
+                        é definida pela tag <code>&lt;figcaption&gt;</code>.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-container card">
+                <div class="tag-highlight">
+                    <p>Para mídias como áudio e vídeo, o HTML5 oferece as tags
+                        <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code>, que criam
+                        players nativos no navegador. A tag
+                        <code>&lt;track&gt;</code> pode ser usada dentro delas para
+                        adicionar legendas, tornando o conteúdo acessível.
+                    </p>
+                </div>
+                <div>
+                    <p class="font-semibold">Exemplo de <code>&lt;audio&gt;</code>:</p>
+                    <audio controls>
+                        <source src="#" type="audio/ogg">
+                        <source src="#" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                    <p class="font-semibold">Exemplo de <code>&lt;video&gt;</code> com legendas:</p>
+                    <video controls muted poster="https://picsum.photos/600/300/?blur">
+                    <source src="#" type="video/mp4">
+                    <track label="Português" kind="subtitles" srclang="pt-br" src="#" default />
+                    Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
