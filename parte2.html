@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia Web - HTML 5 PARTE 2</title>
+
+    <link rel="stylesheet" href="./css/parte2.css">
+</head>
+<body>
+    <header class="cabeca">
+        <h1>
+            Anatomia de uma página HTMl5</h1>
+            <nav>
+                <a href="index.html">⭠ Voltar para a Parte 1</a>
+            </nav>
+        
+    </header>
+    <main class="container">
+        <div class="card">
+            <h2>Aprofundando o Conhecimento</h2>
+            <p>Nesta segunda parte, exploramos tags essenciais para a interatividade (formulários) e para dar um significado ainda mais rico ao conteúdo textual.</p>
+        </div>
+        <section id="formularios">
+            <h3>Formulários Interativos: Coletando Dados</h3>
+            <div class="card">
+                <div class="Esquerda">
+                    <form action="" method="post">
+                        <fieldset>
+
+                            <legend>Informações Pessoais</legend>
+                            <label for="name">Nome Completo:</label>
+                            <input type="text" name="nome" id="nome" required placeholder="Ex: Ana Silva">
+                            <label for="data">Data de Nascimento:</label>
+                            <input type="date" name="data" id="dataid" required>
+                            <label for="curso">Curso de Interesse (com autocompletar)</label>
+                            <input list="cursos" id=cursos" name=cursos" />
+
+                            <datalist id="cursos">
+                                <option value="Analise e Desenvolvimento de Sistemas"></option>
+                                <option value="Engenheira de Software"></option>
+                                <option value="Ciências da Computação"></option>
+                              </datalist>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Preferências</legend>
+                            <label for="area">Área de Foco (com lista dropdown):</label>
+                            <select name="area" id="areaid">
+                                <option value="">Selecione uma opção</option>
+                                <option value="front">Front-End</option>
+                                <option value="back">Back-End</option>
+                                <option value="full">Full-Stack</option>
+                            </select>
+                            <div class="xp">
+                                <label for="nivel">Nível de Experiência:</label>
+
+                                <div class="iniciante">
+                                    <input type="radio" name="experiencia" id="experienciaid">
+                                    <label for="iniciante">Iniciante</label>
+                                </div>
+
+                                <div class="intermediario">
+                                    <input type="radio" name="experiencia" id="experienciaid">
+                                    <label for="intermediario">Intermediário</label>
+                                </div>
+
+                                <div class="avancado">
+                                    <input type="radio" name="experiencia" id="experienciaid">
+                                    <label for="avancado">Avançado</label>
+                                </div>
+
+                            </div>
+                            <div class="tech">
+                                <label for="tecnologias">Tecnologias de Interesse:</label>
+
+                                <div class="html">
+                                    <input type="checkbox" name="html" id="htmlid">
+                                    <label for="html">HTML & CSS</label>
+                                </div>
+
+                                <div class="js">
+                                    <input type="checkbox" name="js" id="jsid">
+                                    <label for="js">JavaScript</label>
+                                </div>
+
+                                <div class="react">
+                                    <input type="checkbox" name="react" id="reactid">
+                                    <label for="react">React</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="direita tag-highlight">
+                    <p>
+                    O formulario agora combina múltiplos elementos: <code>&lt;datalist&gt;</code> para autocompletar, <code>&lt;select&gt;</code> para uma lista fechada de opções
+                    </p>
+                      <p>Para escolhas, usamos <code>&lt;input type="radio"&gt;</code></p> (Escolha unica) e <code>&lt;input type="checkbox"&gt;</code> (Escolha múltipla)</p>
+                      <p>A tag <code>&lt;output&gt;</code> exibe dinamicamente o valor do <code>&lt;input type="range"&gt;</code>, criando uma experiência interativa</p>
+                      <p>Note tambem os atributos <code>&lt;placeholder&gt;</code>, que exibe um texto de ajuda no campo, e <code>&lt;required&gt;</code>, que torna seu prenchimento obrigatório.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Página construída como um projeto de estudo sobre HTML5 Semântico.</p>
+        <p>&copy; 2025. Todos os direitos reservados.</p>  
+    </footer>
+</body>
+</html>
